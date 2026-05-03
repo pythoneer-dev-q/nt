@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>НеПроекты</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --card-bg: #111111;
+            --accent: #ffffff;
+            --text-dim: #999;
+            --border: #222;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            background-color: var(--bg);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .main-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: 2rem;
+            letter-spacing: -0.5px;
+            margin: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .card h2 {
+            margin: 0 0 15px 0;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .card p {
+            color: var(--text-dim);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .btn-action {
+            display: inline-block;
+            text-align: center;
+            padding: 12px 20px;
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.2s;
+        }
+
+        .btn-action:hover {
+            background: var(--accent);
+            color: #000;
+        }
+
+        .footer-cta {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .btn-channel {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        .btn-channel:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.7rem; }
+            .card { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>НеПроекты</h1>
+        </header>
+
+        <main class="grid">
+            <section class="card">
+                <h2>NotAVPN</h2>
+                <p>Высокопроизводительный ускоритель трафика на базе VLESS/Reality. Оптимизирован для мобильных сетей Москвы и регионов. Лимит только условный, в остальном - только чистая скорость.</p>
+                <a href="https://ne-zapret.not-a-projects.xyz" class="btn-action">→ Открыть <b>НеЗапрет</b></a>
+            </section>
+
+            <section class="card">
+                <h2>NotAMusic</h2>
+                <p>Бот-экосистема для управления музыкой. Стриминг, кэширование и умный поиск прямо в интерфейсе Telegram. Твоя медиатека теперь всегда под рукой.</p>
+                <a href="https://t.me/not_a_music_RoBot" class="btn-action">→ Запустить бота</a>
+            </section>
+        </main>
+
+        <div class="footer-cta">
+            <a href="https://t.me/not_a_projects" class="btn-channel">@not_a_projects — наш официальный канал</a>
+        </div>
+    </div>
+</body>
+</html>
